@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Aider / Plandex — Autonomous Agents (CLI)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Aider / Plandex<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>ターミナル中心の対話型エージェント。ファイル編集、コミット、PR 作成までのループが高速です。</p>
+  </header>
+
+  <section>
+    <h2>インストール</h2>
+    <pre># Homebrew (macOS)
+brew install aider
+
+# npm (Cross-platform)
+npm i -g aider-cli
+</pre>
+  </section>
+
+  <section>
+    <h2>使い方（CLI 例）</h2>
+    <pre># レポジトリでタスクを実行
+aider run --task "Fix failing tests" --auto-commit
+
+# 対話式で指示を出す
+aider interactive
+</pre>
+  </section>
+
+  <section>
+    <h2>注意点</h2>
+    <ul>
+      <li>自動コミットや自動マージの設定は慎重に。まずは --dry-run やテストブランチで試す。</li>
+      <li>CI 認証・トークンの権限を適切に設定する（最小権限の原則）。</li>
+    </ul>
+  </section>
+
+  <footer><p><a href="../index.html#agent-aider">戻る</a></p></footer>
+</body>
+</html>

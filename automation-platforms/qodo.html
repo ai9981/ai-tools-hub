@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Qodo (formerly Codium) — Automation, Review & Enterprise Platforms</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Qodo (formerly Codium)<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>テストコード自動生成とロジック検証に特化したツール。品質保証プロセスの自動化を助けます。</p>
+  </header>
+
+  <section>
+    <h2>主な機能</h2>
+    <ul>
+      <li>ユニットテスト生成、ファジング テスト、ロジック検証。</li>
+      <li>CI パイプラインへの自動統合（PR 時にテストを生成・検証）。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>使い方の例</h2>
+    <pre># CLI（疑似）
+qodo generate-tests --path src/utils --framework jest
+
+# CI で実行する例
+# on: pull_request
+# run: qodo ci --repo $GITHUB_WORKSPACE
+</pre>
+  </section>
+
+  <section>
+    <h2>Settings & Integration</h2>
+    <pre># Qodo API key
+export QODO_API_KEY="your_api_key"
+
+# curl 例
+curl -H "Authorization: Bearer $QODO_API_KEY" https://api.qodo.example/v1/generate -d '{"path":"src"}'
+</pre>
+  </section>
+
+  <footer><p><a href="../index.html#platform-qodo">戻る</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>OpenDevin / Manus — Autonomous Agents (OSS)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>OpenDevin / Manus<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>Devin に対するオープンソース対抗実装。自ホスティングやカスタムポリシー適用が可能です。</p>
+  </header>
+
+  <section>
+    <h2>セットアップ（Self-hosting）</h2>
+    <ol>
+      <li>リポジトリをクローンします（例: <code>git clone https://github.com/open-devin/manus.git</code>）。</li>
+      <li>依存関係をインストールし、環境変数を設定します（<code>MANUS_API_KEY</code> など）。</li>
+      <li>ローカルで動作検証を行い、CI と連携する設定を追加します。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>基本的な運用例</h2>
+    <pre># サンプル: ローカルでテストタスクを実行
+# manus run --task "Fix lint errors in src/" --repo ./
+
+# テスト環境で動作を確認した後、クラウドや社内サーバーで常時稼働させる
+</pre>
+  </section>
+
+  <section>
+    <h2>コミュニティと拡張</h2>
+    <p>OSS のため、必要に応じてプラグインやポリシーを追加して安全性と開発スタイルに最適化できる点が強みです。</p>
+  </section>
+
+  <section>
+    <h2>Settings & SDK（例）</h2>
+    <pre># 環境変数
+export MANUS_API_KEY="your_key"
+
+# 実行例（疑似）
+# manus run --task "Create tests for utils" --repo ./
+</pre>
+  </section>
+
+  <footer><p><a href="../index.html#agent-open-devin">戻る</a></p></footer>
+</body>
+</html>

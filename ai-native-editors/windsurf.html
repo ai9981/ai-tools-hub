@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Windsurf — AI Native Editors</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Windsurf<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>Codeium 提供のフロー指向エージェント開発ツール。Flow を作って自律的にタスクを進めます。</p>
+  </header>
+
+  <section>
+    <h2>スクリーンショット</h2>
+    <p>このリポジトリでは実際のスクリーンショット画像を含めていません。</p>
+  </section>
+
+  <section>
+    <h2>インストール</h2>
+    <ol>
+      <li>公式ドキュメント / 配布ページを確認。</li>
+      <li>エディタ拡張や Web ベースで提供されている場合は、それに従ってセットアップ。</li>
+      <li>必要であれば Codeium の API キーやアカウント情報を設定します。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>アカウント作成・ログイン</h2>
+    <ol>
+      <li>Codeium のアカウントを作成（メールまたは OAuth）。</li>
+      <li>Windsurf を有効化し、必要な権限を与える。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>基本的な使い方</h2>
+    <ol>
+      <li>"New Flow" を作成し、ステップを追加して要件を分割します。</li>
+      <li>各ステップに自然言語で目標を記述し、実行ボタンでエージェントを走らせます。</li>
+      <li>実行ログを確認し、必要ならステップを調整して再実行します。</li>
+    </ol>
+
+    <h3>注意点</h3>
+    <p>Flow の設計が鍵です。小さく確実に動くステップを作ると安定します。</p>
+  </section>
+
+  <section>
+    <h2>詳細インストール手順（Windows / Web）</h2>
+    <ol>
+      <li>公式ドキュメントに従い、Windsurf が提供される形式（ブラウザ/拡張/CLI）を確認します。</li>
+      <li>ブラウザ版: アカウントでログインしてダッシュボードからアクセスします。</li>
+      <li>拡張や CLI がある場合は配布ページの手順でインストールします。
+        <pre># 例: プロジェクト作業ディレクトリを開く
+cd path\to\project
+# エディタで開く
+code .
+</pre>
+      </li>
+      <li>API キーやモデル接続情報を設定（環境変数または UI のシークレット設定）。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>実践例 — Flow の作り方</h2>
+    <ol>
+      <li>トップレベルの要件を記述（例: "Create a CRUD API for notes with tests"）。</li>
+      <li>Flow のステップを分割する（例: 初期化、実装、テスト、デプロイ）。</li>
+      <li>各ステップに期待する成果物（ファイルパス、テスト要件）を具体的に記述します。</li>
+      <li>Flow 実行後はローカルでビルド・テストして結果を確認します。</li>
+    </ol>
+
+    <h3>推奨コマンド（ローカル検証用）</h3>
+    <pre># 依存関係のインストール
+npm install
+# テスト実行
+npm test
+# ローカルサーバ起動
+npm run dev</pre>
+  </section>
+
+  <section>
+    <h2>ベストプラクティスとトラブルシュート</h2>
+    <ul>
+      <li>Flow は小さく分ける — 一度に多くの作業をさせない。</li>
+      <li>外部 API やシークレットは事前に設定しておく。</li>
+      <li>Agent の生成物に問題があれば、ログをもとにローカルで再現してデバッグする。</li>
+      <li>変更履歴を残し、Flow の各実行で差分を追えるようにする。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>参考: Codeium の公式ドキュメントを参照してください。</p>
+    <p><a href="../index.html#native-windsurf">戻る</a></p>
+  </footer>
+</body>
+</html>

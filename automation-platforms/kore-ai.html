@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Kore.ai — Automation, Review & Enterprise Platforms</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Kore.ai<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>企業向けエージェント管理プラットフォーム。ガバナンス、監査、ワークフロ―管理に強みがあります。</p>
+  </header>
+
+  <section>
+    <h2>企業導入のポイント</h2>
+    <ul>
+      <li>SSO / ロールベースアクセス制御を組み込み、運用ポリシーを厳格にすること。</li>
+      <li>エージェントの権限を限定し、重要操作は必ず人による承認を要する。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>インテグレーション</h2>
+    <pre># Example: Kore.ai admin setup (pseudo)
+export KORE_ADMIN_TOKEN="your_token"
+curl -H "Authorization: Bearer $KORE_ADMIN_TOKEN" https://api.kore.ai/v1/agents
+</pre>
+  </section>
+
+  <section>
+    <h2>ガバナンスと監査</h2>
+    <ul>
+      <li>監査ログの保存期間、変更履歴の保持、承認チェーンの可視化が重要。</li>
+      <li>定期的なセキュリティレビューとアクセス権の見直しを行うこと。</li>
+    </ul>
+  </section>
+
+  <footer><p><a href="../index.html#platform-kore-ai">戻る</a></p></footer>
+</body>
+</html>

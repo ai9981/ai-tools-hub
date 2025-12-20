@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Continue.dev — VS Code Extension</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Continue.dev<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>任意のLLMと接続できるオープンな拡張。オフラインローカルLLMで動く設定も可能。</p>
+  </header>
+
+  <section>
+    <h2>インストール</h2>
+    <ol>
+      <li>VS Code の拡張マーケットで "Continue.dev" を検索してインストールします。</li>
+      <li>ローカルLLMを使う場合はモデルサーバの接続設定を行います。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>使い方</h2>
+    <ol>
+      <li>任意の LLM を拡張の設定に登録して、補完やコード生成に使います。</li>
+      <li>オフラインでの利用にはローカルモデルサーバのセットアップが必要です（例: llama.cpp ベース）。</li>
+    </ol>
+
+    <h3>コマンド例</h3>
+    <pre>// 例: ローカルサーバを起動して接続する場合
+# ローカルモデルサーバの起動（疑似）
+./local-model-server --model ./models/ggml-model.bin --port 8000
+</pre>
+  </section>
+
+  <section>
+    <h2>トラブルシューティング</h2>
+    <ul>
+      <li>ローカルモデルが動作しない: モデルバイナリの互換性とポート、CORS 設定を確認する。</li>
+      <li>API レイテンシが高い場合は軽量モデルに切り替えるか、ネットワークを見直す。</li>
+    </ul>
+  </section>
+
+  <footer><p><a href="../index.html#vscode-continue-dev">戻る</a></p></footer>
+</body>
+</html>

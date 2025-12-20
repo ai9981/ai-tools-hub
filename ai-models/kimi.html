@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Kimi (Moonshot AI) — Models</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Kimi (Moonshot AI)<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>数百万トークンを処理できる大規模コンテキスト対応モデル。大規模プロジェクトの一括解析に向いています。</p>
+  </header>
+
+  <section>
+    <h2>導入と接続の注意</h2>
+    <p>非常に大きなコンテキストを扱うため、API の料金・レイテンシ・メモリを考慮して利用する。</p>
+  </section>
+
+  <section>
+    <h2>利用例</h2>
+    <ol>
+      <li>大規模リポジトリの一括コード検索やリファクタリング提案。</li>
+      <li>設計書や仕様書の総合解析、影響範囲の洗い出し。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>実装上のヒント</h2>
+    <ul>
+      <li>必要に応じて長文分割と要約を組み合わせて入力する。</li>
+      <li>メモリ・コストの可視化と制限を事前に実装する（バッチ処理等）。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sample Prompts（実例）</h2>
+    <ol>
+      <li>
+        <strong>リポジトリ全体解析 (日本語):</strong>
+        <pre>リポジトリを解析し、非推奨 API 'legacyDb.connect' を参照しているモジュールをリストアップしてください。置換案と影響を受けるファイル一覧も示してください。</pre>
+        <strong>Repository analysis (English):</strong>
+        <pre>Analyze the repository and list modules that reference the deprecated API 'legacyDb.connect'. Provide suggested replacements and affected file list.</pre>
+      </li>
+      <li>
+        <strong>影響範囲の洗い出し (日本語):</strong>
+        <pre>この仕様書をもとに、変更が必要なすべてのファイルを特定し、作業時間を時間数で見積もってください。</pre>
+        <strong>Impact analysis (English):</strong>
+        <pre>Given this spec, identify all files that need changes and estimate effort in hours.</pre>
+      </li>
+      <li>
+        <strong>大規模要約 (日本語):</strong>
+        <pre>添付の 10,000 行の設計ドキュメントを 1 ページのエグゼクティブサマリにまとめ、リスクと対応案をハイライトしてください。</pre>
+        <strong>Large-scale summarization (English):</strong>
+        <pre>Summarize the attached 10,000-line design document into a 1-page executive summary highlighting risks and action items.</pre>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Cost & Performance（目安）</h2>
+    <table border="1" cellpadding="6">
+      <tr><th>項目</th><th>目安</th><th>備考</th></tr>
+      <tr><td>コスト</td><td>高</td><td>大量コンテキスト処理のためコストは高め</td></tr>
+      <tr><td>レイテンシ</td><td>高</td><td>非常に大きな入力は処理時間がかかる</td></tr>
+      <tr><td>得意分野</td><td>大規模解析・要約</td><td>数千〜数百万トークン規模の解析に向く</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Settings & SDK（よくある設定）</h2>
+    <p>Kimi は提供元の SDK/エンドポイントに従う（以下は一般的な例）</p>
+    <pre># 環境変数 (Linux / macOS)
+export KIMI_API_KEY="your_api_key_here"
+export KIMI_ENDPOINT="https://api.moonshot.ai/v1"
+
+# 例: curl で呼ぶ
+curl -X POST "$KIMI_ENDPOINT/generate" -H "Authorization: Bearer $KIMI_API_KEY" -d '{"model":"kimi-large","input":"Summarize the repo"}'
+</pre>
+  </section>
+
+  <footer><p><a href="../index.html#model-kimi">戻る</a></p></footer>
+</body>
+</html>

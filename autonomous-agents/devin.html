@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Devin (Cognition) — Autonomous Agents</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Devin (Cognition)<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>商用の自律型ソフトウェアエンジニア。要件定義から設計、実装、テスト、デプロイまで自律的に遂行します。</p>
+  </header>
+
+  <section>
+    <h2>導入と準備</h2>
+    <ol>
+      <li>Cognition の提供するポータルでアカウントを作成し、API/組織キーを取得します。</li>
+      <li>プロジェクトとリポジトリへのアクセス許可（Read/Write）を付与します。</li>
+      <li>初期のタスクテンプレート（policy / constraints）を用意します（バジェット・レビュー頻度など）。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>基本的な使い方（例）</h2>
+    <pre># Web UI で "Create project: Implement feature X" を入力して計画を生成
+# CLI（疑似）
+# devin run --task "Implement feature X" --repo https://github.com/your/repo.git --branch devin/feature-x
+
+# デフォルトでプラン → PR 作成 → CI 実行 → マージ申請 の流れを実行します
+</pre>
+  </section>
+
+  <section>
+    <h2>安全性・ガバナンス</h2>
+    <ul>
+      <li>自律性が高いため、レビュー・承認フロー（人間のオーバーサイト）を必ず組み込む。</li>
+      <li>アクセス権限を最小化し、重要な変更（リリース・DBマイグレーション）は手動承認にする。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>ユースケースとベストプラクティス</h2>
+    <ul>
+      <li>定型的なバグ修正、テスト追加、依存関係の更新などを自動化すると効果が大きい。</li>
+      <li>安全性の高いサンドボックス環境でまずは少数のレポジトリで試験運用することを推奨。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Settings & Integration（設定例）</h2>
+    <pre># Environment variable
+export DEVIN_API_KEY="your_api_key_here"
+
+# Example: run via CLI (pseudo)
+# devin run --task "Add unit tests for parseCsv" --repo https://github.com/your/repo.git
+</pre>
+  </section>
+
+  <footer><p><a href="../index.html#agent-devin">戻る</a></p></footer>
+</body>
+</html>
