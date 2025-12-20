@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Amazon Q — VS Code Extension</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Amazon Q<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>AWS 向けの開発・診断に特化した拡張。レガシー近代化や脆弱性検査の自動化に強みがあります。</p>
+  </header>
+
+  <section>
+    <h2>インストール</h2>
+    <ol>
+      <li>VS Code の拡張マーケットで "Amazon Q" を検索してインストールします。</li>
+      <li>AWS 認証情報（環境変数やプロファイル）を設定して拡張に接続します。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>使い方（よく使う操作）</h2>
+    <ol>
+      <li>既存の AWS プロジェクトを開き、拡張のスキャン機能で脆弱性や最適化案を確認します。</li>
+      <li>レガシー Java プロジェクトのアップグレード提案（例: Java 8 -> 17）を自動提案することがあります。</li>
+    </ol>
+
+    <h3>コマンド例</h3>
+    <pre>// 例: スキャンの実行（CLIが提供されている場合）
+// aws-q scan --project .
+</pre>
+  </section>
+
+  <section>
+    <h2>トラブルシューティング</h2>
+    <ul>
+      <li>AWS 認証エラー: プロファイル/環境変数を確認し、必要な IAM 権限があるか確認する。</li>
+      <li>スキャンのエラー: 大規模プロジェクトでは時間がかかるため、範囲を絞って試す。</li>
+    </ul>
+  </section>
+
+  <footer><p><a href="../index.html#vscode-amazon-q">戻る</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* Sakura theme — soft, cute Japanese aesthetic */
+:root{
+  --bg-start:#fff7fb;
+  --bg-end:#fffaf2;
+  --accent:#ff6fb2; /* sakura pink */
+  --accent-2:#ffd6ea; /* soft pink */
+  --card-bg:rgba(255,255,255,0.95);
+  --muted:#6b6b6b;
+  --shadow: 0 8px 20px rgba(16,24,40,0.06);
+}
+
+html{scroll-behavior:smooth}
+body{
+  background: linear-gradient(180deg,var(--bg-start),var(--bg-end));
+  font-family:"Yu Gothic UI","Hiragino Maru Gothic Pro","Hiragino Kaku Gothic ProN", Meiryo, "Noto Sans JP", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color:#333;
+  max-width:960px;
+  margin:18px auto;
+  padding:20px;
+}
+
+/* Floating sakura petals (subtle) */
+body::after{
+  content:'';
+  pointer-events:none;
+  position:fixed;
+  left:0;right:0;top:0;bottom:0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='%23ffd6ea'><path d='M60 10c6 0 12 4 14 9 0 0 13 1 17 8 3 6-2 13-8 18 0 0 6 9 4 15-3 9-13 12-21 12 0 0-2 12-13 14-9 1-14-6-18-11-5-7-11-4-17-13-8-12 4-20 7-23-6-6-8-16-1-25 8-10 23-17 30-9 4 4 7 3 13 2z'/></g></svg>");
+  background-repeat:no-repeat;
+  background-position:10% 5%, 80% 20%, 60% 80%;
+  background-size: 180px 180px, 120px 120px, 200px 200px;
+  opacity:0.15;
+}
+
+header{
+  text-align:center;
+  position:relative;
+  padding:28px 8px 26px 8px;
+  border-bottom:2px solid rgba(255,111,178,0.12);
+}
+header h1{font-size:2.4rem;margin:0;color:#e11d6a}
+header p.subtitle{color:var(--muted);margin-top:6px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.card{
+  background:var(--card-bg);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,111,178,0.06);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(16,24,40,0.08)}
+
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tool-name{font-size:1.2rem;color:#b91c6b}
+.badge{background:linear-gradient(90deg,var(--accent),#ff9fcf);color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:.78rem}
+
+.description{color:#444;margin-bottom:10px}
+.tags{color:#c026d3;font-weight:700}
+
+h2{color:#c0266f;margin-top:0}
+pre{background:#1f2a3a;color:#f8fbff;padding:12px;border-radius:10px;overflow:auto}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+footer{color:var(--muted);text-align:center;margin-top:36px;padding-top:18px;border-top:1px dashed rgba(255,111,178,0.08)}
+
+.back-link a{color:var(--accent);font-weight:700}
+
+/* Small responsive tweaks */
+@media (max-width:420px){body{padding:12px}header h1{font-size:1.8rem}.card{padding:14px}}
+
+/* Cute badges for sections */
+.section-badge{display:inline-block;background:var(--accent-2);color:#ae1662;padding:6px 8px;border-radius:8px;font-weight:700;margin-left:8px}
+
+/* utility: cute sakura icon inline */
+.sakura-icon{display:inline-block;width:20px;height:20px;vertical-align:middle;margin-left:8px}
+.sakura-icon svg{width:100%;height:100%;fill:#ff89b8;opacity:0.95}

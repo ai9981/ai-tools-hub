@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Replit Agent — AI Native Editors</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Replit Agent<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>ブラウザで完結するエージェント機能。環境構築不要で開発からデプロイまで行える点が特徴です。</p>
+  </header>
+
+  <section>
+    <h2>スクリーンショット</h2>
+    <p>このリポジトリでは実際のスクリーンショット画像を含めていません。</p>
+  </section>
+
+  <section>
+    <h2>セットアップ</h2>
+    <ol>
+      <li>Replit にサインアップ: https://replit.com</li>
+      <li>新しい Repl を作成してテンプレートを選択。</li>
+      <li>Agent 機能がある場合は該当メニューから有効化（プラン依存）。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>使い方（基本）</h2>
+    <ol>
+      <li>プロジェクト画面で Agent を呼び出し、要件を自然言語で入力します（例: "Create a simple Flask app"）。</li>
+      <li>Agent が環境を作成し、実行・デプロイを試みます。</li>
+      <li>生成されたファイルは GUI で確認・編集できます。必要に応じて手動でデプロイの設定を調整してください。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>詳細セットアップと運用例</h2>
+    <ol>
+      <li>Repl を作成後、左メニューの "Secrets"（環境変数）に API キーやシークレットを追加します。</li>
+      <li>Agent を有効化する（プランによっては有料機能）。Agent の権限設定でファイル操作と実行を許可します。</li>
+      <li>Agent に与える指示は具体的に：出力ファイルのパス、動作確認手順、テストコマンドなどを明記すると安定します。</li>
+    </ol>
+
+    <h3>例: Flask アプリを作る指示</h3>
+    <pre>Create a simple Flask app in main.py with one endpoint /hello that returns JSON {"msg":"hello"}, and add a requirements.txt and a Procfile for deployment.</pre>
+
+    <h3>Replit 内での手動コマンド例</h3>
+    <pre># パッケージインストール
+pip install -r requirements.txt
+# テスト実行（例）
+pytest -q
+# ローカルでの実行
+python main.py</pre>
+
+    <h3>デプロイ</h3>
+    <p>Replit の "Deploy" 機能を使うか、生成されたプロジェクトを外部ホスティングにエクスポートします。自動デプロイの設定はプラットフォーム依存です。</p>
+
+    <h3>トラブルシュート</h3>
+    <ul>
+      <li>Agent が失敗する: 実行ログを確認し、権限やシークレット設定を見直す。</li>
+      <li>ネットワーク制限: 外部 API にアクセスする場合はプランでの制限を確認する。</li>
+      <li>永続化: データベースや永続ストレージの設定は Replit の機能と合わせて行う。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>参考: Replit のドキュメントとプラン情報を確認してください。</p>
+    <p><a href="../index.html#native-replit-agent">戻る</a></p>
+  </footer>
+</body>
+</html>

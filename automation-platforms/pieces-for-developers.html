@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Pieces for Developers — Automation, Review & Enterprise Platforms</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Pieces for Developers<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>ナレッジベースとスニペット管理を自動化するツール。検索と再利用による開発効率化が目的。</p>
+  </header>
+
+  <section>
+    <h2>機能</h2>
+    <ul>
+      <li>開発中に発見した解決策やコードスニペットを自動で保存。</li>
+      <li>コンテキストに基づく推奨スニペットや FAQ の自動生成。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>導入と統合</h2>
+    <pre># Slack / Confluence / VS Code と統合してナレッジを共有
+# API 例 (pseudo)
+export PIECES_API_KEY="your_api_key"
+curl -H "Authorization: Bearer $PIECES_API_KEY" https://api.pieces.example/v1/snippets -d '{"code":"function x() {}"}'
+</pre>
+  </section>
+
+  <section>
+    <h2>運用のヒント</h2>
+    <ul>
+      <li>保存ポリシーとアクセス権を決め、セキュリティを担保する。</li>
+      <li>メタデータを付与して検索可能性を高める（タグ、プロジェクト、問題ID）。</li>
+    </ul>
+  </section>
+
+  <footer><p><a href="../index.html#platform-pieces-for-developers">戻る</a></p></footer>
+</body>
+</html>

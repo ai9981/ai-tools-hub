@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Void — AI Native Editors</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Void<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>Cursor のオープンソース代替を目指すプロジェクト。ローカル実行やカスタマイズに向く。</p>
+  </header>
+
+  <section>
+    <h2>スクリーンショット</h2>
+    <p>このリポジトリでは実際のスクリーンショット画像を含めていません。</p>
+  </section>
+
+  <section>
+    <h2>インストール（ソースから）</h2>
+    <ol>
+      <li>リポジトリをクローン: <pre>git clone &lt;repo-url&gt;</pre></li>
+      <li>README の依存関係をインストール（例: Node.js, Python など）。</li>
+      <li>ビルド手順を実行（例: <code>npm install</code> / <code>npm run build</code>）。</li>
+      <li>ローカルサーバを起動してブラウザでアクセスします。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>アカウント/認証</h2>
+    <p>OSS 版ではローカルのみで完結する構成が多く、アカウント不要で直接使える場合があります。クラウド連携機能を使う場合は別途認証が必要です。</p>
+  </section>
+
+  <section>
+    <h2>使い方（基本）</h2>
+    <ol>
+      <li>ローカルインスタンスにプロジェクトを読み込む。</li>
+      <li>設定ファイルで外部モデルやプラグインを接続する。</li>
+      <li>UI または CLI から編集・補完を利用。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>詳細ビルド/実行手順（ソースから）</h2>
+    <ol>
+      <li>リポジトリをクローン:
+        <pre>git clone &lt;repo-url&gt;
+cd &lt;repo-directory&gt;</pre>
+      </li>
+      <li>依存関係をインストール（例: Node.js）:
+        <pre>npm ci
+# または
+npm install</pre>
+      </li>
+      <li>環境変数を設定（例: モデルエンドポイントや API キー）:
+        <pre>setx VOID_MODEL_ENDPOINT "http://localhost:8000"
+setx VOID_API_KEY "your_api_key_here"</pre>
+      </li>
+      <li>ビルドと起動:
+        <pre>npm run build
+npm run start
+# 開発モード
+npm run dev</pre>
+      </li>
+      <li>ブラウザで http://localhost:3000（プロジェクトによる）にアクセス。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>ローカルモデル接続の例</h2>
+    <p>ローカルの LLM（例: llama.cpp / ggml ベース）を使う場合、モデルサーバを立ててエンドポイントを設定します。</p>
+    <pre># 例: ローカルモデルサーバを起動（疑似コマンド）
+./local-model-server --model ./models/ggml-model.bin --port 8000
+
+# Void 側では環境変数で接続を指定
+export VOID_MODEL_ENDPOINT=http://localhost:8000
+</pre>
+  </section>
+
+  <section>
+    <h2>運用上の注意とトラブルシュート</h2>
+    <ul>
+      <li>依存関係のバージョン不整合: README の推奨 Node.js バージョンを使う。</li>
+      <li>モデル接続エラー: エンドポイントの応答を curl などで確認する。</li>
+      <li>パフォーマンス: 大きなモデルはメモリを大量に消費するため、GPU/メモリの監視が必要。</li>
+      <li>セキュリティ: ローカルであっても API キーやシークレットは必ず環境変数やシークレットストアで管理する。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>参考: 実際のリポジトリとドキュメントを確認してください。</p>
+    <p><a href="../index.html#native-void">戻る</a></p>
+  </footer>
+</body>
+</html>

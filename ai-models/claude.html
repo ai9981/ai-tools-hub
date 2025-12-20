@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Claude 3.5 Sonnet / 4 — Models</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/sakura.css">
+</head>
+<body>
+  <header>
+    <h1>Claude 3.5 Sonnet / 4<span class="sakura-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="8" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="16" r="1.6"/><circle cx="14" cy="16" r="1.6"/></g></svg></span></h1>
+    <p>高い論理性とコードの正確性で評価されるモデル。大規模な推論で安定した結果を出します。</p>
+  </header>
+
+  <section>
+    <h2>導入と接続</h2>
+    <ol>
+      <li>Anthropic の公式ドキュメントを参照し、API キーを取得します。</li>
+      <li>環境変数に API キーを設定します（例: <code>export ANTHROPIC_API_KEY=xxx</code>）。</li>
+      <li>推論用のクライアントライブラリ（公式 SDK）をプロジェクトに導入します。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>基本的な使い方（Node.js 例）</h2>
+    <pre>// pseudo-code
+const Anthropic = require('@anthropic/sdk');
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const res = await client.generate({ model: 'claude-3.5-sonnet', prompt: 'Write a unit test for formatDate' });
+console.log(res.text);
+</pre>
+  </section>
+
+  <section>
+    <h2>用途別の注意点</h2>
+    <ul>
+      <li>複雑な論理や長文の理解に強いが、コストを考慮して目的に合わせたモデル選択をする。</li>
+      <li>システムプロンプト（指示）を明確にすることで予測性能が高まる。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>トラブルシューティング</h2>
+    <ul>
+      <li>応答が不安定な場合は入力の温度設定や max tokens を調整する。</li>
+      <li>API レート制限に注意（リトライロジックを実装する）。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sample Prompts（実例）</h2>
+    <ol>
+      <li>
+        <strong>ユニットテスト生成 (日本語):</strong>
+        <pre>Jest を使って、'YYYY-MM-DD' を 'MMM D, YYYY' に変換する formatDate 関数のユニットテストを作成してください。境界ケースも含めてください。</pre>
+        <strong>Unit test generation (English):</strong>
+        <pre>Write Jest unit tests for the formatDate function which handles 'YYYY-MM-DD' to 'MMM D, YYYY'. Include edge cases.</pre>
+      </li>
+      <li>
+        <strong>複雑なロジック説明 (日本語):</strong>
+        <pre>再帰的なフィボナッチ実装におけるメモ化（memoization）がどのように動作するか説明し、JavaScript の例を示してください。</pre>
+        <strong>Complex logic explanation (English):</strong>
+        <pre>Explain how memoization works in a recursive Fibonacci implementation and provide an example in JavaScript.</pre>
+      </li>
+      <li>
+        <strong>リファクタリング提案 (日本語):</strong>
+        <pre>クラスベースの React コンポーネントを hooks を使った関数コンポーネントにリファクタリングしてください。挙動は同じにしてください。</pre>
+        <strong>Refactoring suggestion (English):</strong>
+        <pre>Refactor this class-based React component to a function component using hooks. Keep behavior identical.</pre>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Cost & Performance（目安）</h2>
+    <table border="1" cellpadding="6">
+      <tr><th>項目</th><th>目安</th><th>備考</th></tr>
+      <tr><td>コスト</td><td>中</td><td>高精度だが用途によりコストがかかる場合がある</td></tr>
+      <tr><td>レイテンシ</td><td>中</td><td>複雑な推論はやや時間がかかる</td></tr>
+      <tr><td>得意分野</td><td>論理推論・コード生成</td><td>複雑なアルゴリズムや設計に強い</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Settings & SDK（よくある設定）</h2>
+    <p>例: 環境変数と簡単なクライアントコード</p>
+    <pre># 環境変数 (Linux / macOS)
+export ANTHROPIC_API_KEY="your_api_key_here"
+
+# 環境変数 (Windows PowerShell)
+setx ANTHROPIC_API_KEY "your_api_key_here"
+
+# Node.js (pseudo)
+const Anthropic = require('@anthropic/sdk');
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const res = await client.generate({ model: 'claude-3.5-sonnet', prompt: 'Write a unit test...' });
+
+# Python (pseudo)
+from anthropic import Anthropic
+client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
+res = client.generate(model='claude-3.5-sonnet', prompt='Write a unit test...')
+</pre>
+  </section>
+
+  <footer><p><a href="../index.html#model-claude">戻る</a></p></footer>
+</body>
+</html>
