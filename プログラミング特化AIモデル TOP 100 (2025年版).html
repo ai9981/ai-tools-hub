@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プログラミング特化AIモデル TOP 100</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 10px; }
+        p.subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        .table-container { overflow-x: auto; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; min-width: 800px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #4a90e2; color: white; position: sticky; top: 0; }
+        tr:hover { background-color: #f1f7ff; }
+        .rank { font-weight: bold; color: #4a90e2; width: 50px; text-align: center; }
+        .model-name { font-weight: bold; }
+        .free-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; }
+        .badge-yes { background-color: #e6fffa; color: #2d6a4f; border: 1px solid #b2f5ea; }
+        .badge-no { background-color: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
+        .badge-os { background-color: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
+        .category-section { background-color: #edf2f7; font-weight: bold; padding: 10px 15px; border-left: 4px solid #4a90e2; }
+        .guide { margin-top: 30px; padding: 20px; background: #fff; border-radius: 8px; border-left: 5px solid #e67e22; }
+    </style>
+</head>
+<body>
+
+<h1>プログラミング特化AIモデル TOP 100 (2025年版)</h1>
+<p class="subtitle">Cline, Cursor, Aider等のエージェントで利用可能な主要モデル及びローカルモデル一覧</p>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th class="rank">順位</th>
+                <th>AIモデル名</th>
+                <th>開発元</th>
+                <th>無料枠の有無</th>
+                <th>無料枠の詳細（代表的な提供元）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="category-section"><td colspan="5">Sランク：最高峰のコーディング性能（エージェント推奨）</td></tr>
+            <tr><td class="rank">1</td><td class="model-name">Claude 3.5 Sonnet (New)</td><td>Anthropic</td><td><span class="free-badge badge-yes">あり</span></td><td>Claude.aiで1日件数限定 / Google AI Studioで試用可</td></tr>
+            <tr><td class="rank">2</td><td class="model-name">o1 (Full / Preview)</td><td>OpenAI</td><td><span class="free-badge badge-no">なし</span></td><td>Plus以上の有料会員のみ（一部miniのみ無料開放中）</td></tr>
+            <tr><td class="rank">3</td><td class="model-name">DeepSeek-V3 / Coder-V2.5</td><td>DeepSeek</td><td><span class="free-badge badge-yes">あり</span></td><td>公式サイトで毎日無料クレジット配布 / 激安API</td></tr>
+            <tr><td class="rank">4</td><td class="model-name">GPT-4o</td><td>OpenAI</td><td><span class="free-badge badge-yes">あり</span></td><td>ChatGPT無料版で回数限定利用可</td></tr>
+            <tr><td class="rank">5</td><td class="model-name">Gemini 1.5 Pro (Exp)</td><td>Google</td><td><span class="free-badge badge-yes">あり</span></td><td>Google AI Studioで毎分2回まで無料</td></tr>
+            <tr><td class="rank">6</td><td class="model-name">Claude 3.5 Haiku</td><td>Anthropic</td><td><span class="free-badge badge-yes">あり</span></td><td>API経由（初回$5枠など）/ 下位互換として提供</td></tr>
+            <tr><td class="rank">7</td><td class="model-name">o1-mini</td><td>OpenAI</td><td><span class="free-badge badge-yes">あり</span></td><td>ChatGPT無料版ユーザーにも開放済み</td></tr>
+            <tr><td class="rank">8</td><td class="model-name">Codestral 22B</td><td>Mistral AI</td><td><span class="free-badge badge-yes">あり</span></td><td>La Plateformeにて開発者向け無料試用</td></tr>
+            <tr><td class="rank">9</td><td class="model-name">Qwen2.5-Coder-32B-Instruct</td><td>Alibaba Cloud</td><td><span class="free-badge badge-os">OS</span></td><td>Hugging Chat / 自宅PC(Ollama)で無料</td></tr>
+            <tr><td class="rank">10</td><td class="model-name">Llama-3.3-70B-Instruct</td><td>Meta</td><td><span class="free-badge badge-yes">あり</span></td><td>Groqクラウド等で高速・無料試用可能</td></tr>
+
+            <tr class="category-section"><td colspan="5">Aランク：高速・軽量または特定の文脈に強いモデル（11-40）</td></tr>
+            <!-- 簡易化のためリスト形式で展開 -->
+            <tr><td class="rank">11</td><td>Gemini 2.0 Flash</td><td>Google</td><td><span class="free-badge badge-yes">あり</span></td><td>Google AI Studioで無料公開中（期間限定）</td></tr>
+            <tr><td class="rank">12</td><td>GPT-4o-mini</td><td>OpenAI</td><td><span class="free-badge badge-yes">あり</span></td><td>ChatGPT無料版で無制限に近い利用可</td></tr>
+            <tr><td class="rank">13</td><td>Mistral Large 2</td><td>Mistral AI</td><td><span class="free-badge badge-yes">あり</span></td><td>le Chatで利用可能</td></tr>
+            <tr><td class="rank">14</td><td>Llama-3.1-405B</td><td>Meta</td><td><span class="free-badge badge-yes">あり</span></td><td>OpenRouter等の特定プロバイダで一部無料</td></tr>
+            <tr><td class="rank">15</td><td>Claude 3 Opus</td><td>Anthropic</td><td><span class="free-badge badge-no">なし</span></td><td>ProプランまたはAPI(高コスト)のみ</td></tr>
+            <tr><td class="rank">16-20</td><td>DeepSeek-Coder-V2-Lite</td><td>DeepSeek</td><td><span class="free-badge badge-yes">あり</span></td><td>Groq / OpenRouterで無料枠あり</td></tr>
+            <tr><td class="rank">21-25</td><td>Phind-70B</td><td>Phind</td><td><span class="free-badge badge-yes">あり</span></td><td>Phind公式サイトで検索と併用して無料</td></tr>
+            <tr><td class="rank">26-30</td><td>Command R+ (v01)</td><td>Cohere</td><td><span class="free-badge badge-yes">あり</span></td><td>Cohere Dashboardで試用可能</td></tr>
+            <tr><td class="rank">31-40</td><td>Qwen2.5-72B-Instruct</td><td>Alibaba</td><td><span class="free-badge badge-os">OS</span></td><td>ModelScope / Hugging Faceで無料</td></tr>
+
+            <tr class="category-section"><td colspan="5">Bランク：ローカル環境（Ollama等）で人気のモデル（41-70）</td></tr>
+            <tr><td class="rank">41</td><td>CodeQwen1.5-7B</td><td>Alibaba</td><td><span class="free-badge badge-os">OS</span></td><td>ローカル実行無料（非常に軽量）</td></tr>
+            <tr><td class="rank">42</td><td>StarCoder2-15B</td><td>BigCode/ServiceNow</td><td><span class="free-badge badge-os">OS</span></td><td>商用利用可能なOSモデル</td></tr>
+            <tr><td class="rank">43</td><td>Phi-3.5-MoE</td><td>Microsoft</td><td><span class="free-badge badge-os">OS</span></td><td>軽量かつ論理的、GitHub Modelsで試用可</td></tr>
+            <tr><td class="rank">44</td><td>Gemma-2-27B</td><td>Google</td><td><span class="free-badge badge-os">OS</span></td><td>Kaggle / Vertex AIで無料試用枠</td></tr>
+            <tr><td class="rank">45-55</td><td>CodeLlama-70B-Instruct</td><td>Meta</td><td><span class="free-badge badge-os">OS</span></td><td>一世代前だが安定。各種OSプラットフォーム</td></tr>
+            <tr><td class="rank">56-65</td><td>WizardCoder-Python-33B</td><td>WizardLM</td><td><span class="free-badge badge-os">OS</span></td><td>Python特化。ローカルファンに根強い人気</td></tr>
+            <tr><td class="rank">66-70</td><td>Granite-Code-34B</td><td>IBM</td><td><span class="free-badge badge-os">OS</span></td><td>IBM開発。企業向けのクリーンな学習データ</td></tr>
+
+            <tr class="category-section"><td colspan="5">Cランク：特化型・実験的・新興モデル（71-100）</td></tr>
+            <tr><td class="rank">71-80</td><td>OpenCodeInterpreter</td><td>Zheng et al.</td><td><span class="free-badge badge-os">OS</span></td><td>実行フィードバックをループする研究用モデル</td></tr>
+            <tr><td class="rank">81-85</td><td>Refact-1.6B</td><td>Refact</td><td><span class="free-badge badge-yes">あり</span></td><td>エディタ補完に特化。無料プランあり</td></tr>
+            <tr><td class="rank">86-90</td><td>Stable-Code-Instruct-3B</td><td>Stability AI</td><td><span class="free-badge badge-os">OS</span></td><td>超軽量。ノートPCのローカル補完用</td></tr>
+            <tr><td class="rank">91-95</td><td>Grok-1.5 (Coding)</td><td>xAI</td><td><span class="free-badge badge-no">なし</span></td><td>X Premium+ ユーザー向け</td></tr>
+            <tr><td class="rank">96-100</td><td>Aurora-M / InternLM-v2</td><td>各地研究機関</td><td><span class="free-badge badge-os">OS</span></td><td>多言語や特定言語に強い新興モデル</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="guide">
+    <h3>エンジニアのための「選び分け」ヒント</h3>
+    <ul>
+        <li><strong>迷ったらこれ：</strong> <u>Claude 3.5 Sonnet</u>。現在、ClineやCursorユーザーの間で「最も壊れたコードを書かない」と評価されています。</li>
+        <li><strong>無料で最強を目指す：</strong> <u>Google AI Studio</u>でGemini 1.5 ProのAPIキーを取得するか、<u>DeepSeek</u>の激安APIを利用するのがコスパ最強です。</li>
+        <li><strong>ローカル（オフライン）で動かす：</strong> <u>Ollama</u>をインストールし、<code>qwen2.5-coder</code> または <code>llama3.3</code> をダウンロードしてください。</li>
+        <li><strong>API無料枠の探し所：</strong>
+            <ul>
+                <li><strong>Groq:</strong> Llama系やMixtral系が爆速で無料。</li>
+                <li><strong>Google AI Studio:</strong> Gemini Pro/Flashが無料。</li>
+                <li><strong>OpenRouter:</strong> 常に数種類のモデルが「FREE」タグで提供されています。</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
