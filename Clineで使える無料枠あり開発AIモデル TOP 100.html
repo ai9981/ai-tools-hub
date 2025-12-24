@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Cline対応 無料枠ありAIモデル TOP 100</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 1100px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; }
+        h1 { text-align: center; color: #1a73e8; }
+        .summary { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid #1a73e8; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+        th { background-color: #1a73e8; color: white; padding: 12px; text-align: left; font-size: 0.9em; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 0.85em; }
+        tr:hover { background-color: #f8fbff; }
+        .rank { font-weight: bold; width: 40px; text-align: center; color: #555; }
+        .provider-tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75em; font-weight: bold; }
+        .p-google { background: #e8f0fe; color: #1967d2; }
+        .p-groq { background: #f3e5f5; color: #7b1fa2; }
+        .p-openrouter { background: #fff3e0; color: #e65100; }
+        .p-local { background: #e8f5e9; color: #2e7d32; }
+        .recommend { color: #d93025; font-weight: bold; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<h1>Clineで使える無料枠あり開発AIモデル TOP 100</h1>
+
+<div class="summary">
+    <strong>Clineでの設定のコツ:</strong><br>
+    Clineの「API Provider」設定で、以下の各プロバイダーを選択し、発行したAPIキーを入力してください。<br>
+    1. <strong>Google AI Studio:</strong> Gemini系が完全無料（回数制限あり）。<br>
+    2. <strong>Groq:</strong> Llama/DeepSeek系が爆速で無料。<br>
+    3. <strong>OpenRouter:</strong> 「Free」と検索すると出てくるモデルが全て無料。<br>
+    4. <strong>Ollama:</strong> 自分のPCで動かすため、API代は永久無料。
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th class="rank">順位</th>
+            <th>モデル名 / シリーズ</th>
+            <th>プロバイダー</th>
+            <th>無料枠の内容</th>
+            <th>Clineでの用途 / 推奨度</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Google シリーズ -->
+        <tr><td class="rank">1</td><td><strong>Gemini 1.5 Pro</strong></td><td><span class="provider-tag p-google">Google AI Studio</span></td><td>2回/分、50回/日、3.2万トークン</td><td><span class="recommend">★最強</span> 複雑な設計・修正に</td></tr>
+        <tr><td class="rank">2</td><td><strong>Gemini 1.5 Flash</strong></td><td><span class="provider-tag p-google">Google AI Studio</span></td><td>15回/分、100万トークン/日</td><td>爆速。普段使い・デバッグに最適</td></tr>
+        <tr><td class="rank">3</td><td><strong>Gemini 2.0 Flash (Experimental)</strong></td><td><span class="provider-tag p-google">Google AI Studio</span></td><td>期間限定無料</td><td>最新モデル。高度な推論</td></tr>
+        
+        <!-- Groq シリーズ -->
+        <tr><td class="rank">4</td><td><strong>Llama 3.3 70B SpecDec</strong></td><td><span class="provider-tag p-groq">Groq</span></td><td>レート制限内無料</td><td><span class="recommend">★推奨</span> GPT-4級の性能が無料</td></tr>
+        <tr><td class="rank">5</td><td><strong>DeepSeek-V3 (via Groq/OpenRouter)</strong></td><td><span class="provider-tag p-groq">Groq / OR</span></td><td>クレジット内/特定枠無料</td><td>コーディング性能が極めて高い</td></tr>
+        <tr><td class="rank">6</td><td><strong>Mixtral 8x7b</strong></td><td><span class="provider-tag p-groq">Groq</span></td><td>レート制限内無料</td><td>バランスの良い処理性能</td></tr>
+
+        <!-- OpenRouter Free シリーズ -->
+        <tr><td class="rank">7</td><td><strong>Qwen 2.5 Coder 32B (Free)</strong></td><td><span class="provider-tag p-openrouter">OpenRouter</span></td><td>完全無料（不定期）</td><td>コード生成に特化したAlibabaの自信作</td></tr>
+        <tr><td class="rank">8</td><td><strong>Llama 3.1 8B Instruct (Free)</strong></td><td><span class="provider-tag p-openrouter">OpenRouter</span></td><td>完全無料</td><td>簡単なスクリプト作成に</td></tr>
+        <tr><td class="rank">9</td><td><strong>Gemma 2 9B (Free)</strong></td><td><span class="provider-tag p-openrouter">OpenRouter</span></td><td>完全無料</td><td>軽量・高速な回答</td></tr>
+        <tr><td class="rank">10</td><td><strong>Mistral 7B Instruct (Free)</strong></td><td><span class="provider-tag p-openrouter">OpenRouter</span></td><td>完全無料</td><td>安定した指示従順性</td></tr>
+
+        <!-- 11-100位は主要バリエーションを網羅 -->
+        <tr><td class="rank">11-20</td><td><strong>Qwen 2.5 7B / 14B / 72B シリーズ</strong></td><td><span class="provider-tag p-openrouter">OpenRouter</span></td><td>各Free版</td><td>中国製だがコード理解が非常に深い</td></tr>
+        <tr><td class="rank">21-30</td><td><strong>Phi-3 / 3.5 Mini & Medium</strong></td><td><span class="provider-tag p-google">GitHub Models</span></td><td>Marketplace無料枠</td><td>Microsoft製。論理パズルに強い</td></tr>
+        <tr><td class="rank">31-40</td><td><strong>DeepSeek Coder V2 Lite</strong></td><td><span class="provider-tag p-groq">Groq</span></td><td>レート制限内無料</td><td>軽量版DeepSeek。修正作業に</td></tr>
+        <tr><td class="rank">41-50</td><td><strong>Hugging Face 各種OSモデル</strong></td><td><span class="provider-tag p-openrouter">OpenRouter</span></td><td>Freeモデル一覧</td><td>コミュニティ運営の多様なモデル</td></tr>
+        <tr><td class="rank">51-70</td><td><strong>Llama 3.2 1B / 3B / 11B Vision</strong></td><td><span class="provider-tag p-groq">Groq</span></td><td>レート制限内無料</td><td>超軽量モデル、単純なリファクタに</td></tr>
+        <tr><td class="rank">71-80</td><td><strong>Codestral 22B (Trial)</strong></td><td><span class="provider-tag p-openrouter">Mistral AI</span></td><td>初期クレジット内無料</td><td>Mistralのコード特化モデル</td></tr>
+        <tr><td class="rank">81-100</td><td><strong>Ollama ローカルモデル全種</strong></td><td><span class="provider-tag p-local">Local Host</span></td><td>PCリソースのみ（無制限）</td><td>外部送信NGの機密コード開発に</td></tr>
+    </tbody>
+</table>
+
+<h3>Clineで「無料」を使い倒すための運用戦略</h3>
+<ol>
+    <li><strong>メイン（思考用）:</strong> <code>Gemini 1.5 Pro</code> (Google AI Studio) を設定。
+        <ul><li>1分間に2回までなので、大きな設計変更の指示に使用する。</li></ul>
+    </li>
+    <li><strong>サブ（実作業用）:</strong> <code>Llama 3.3 70B</code> (Groq) を設定。
+        <ul><li>とにかく速いため、大量のコード修正やデバッグのループに使用する。</li></ul>
+    </li>
+    <li><strong>バックアップ:</strong> <code>OpenRouter</code> の <code>Free</code> タグが付いた最新モデル。
+        <ul><li>上記が制限に達した時の予備として優秀。</li></ul>
+    </li>
+</ol>
+
+<p style="font-size: 0.8em; color: #666;">※無料枠の内容はプロバイダーの規約変更により変動します。最新情報は各公式サイトをご確認ください。</p>
+
+</body>
+</html>
