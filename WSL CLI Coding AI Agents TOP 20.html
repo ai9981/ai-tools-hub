@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSL対応 CLIコーディングAIエージェント TOP20</title>
+    <style>
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', Courier, monospace, "Meiryo";
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #1e1e1e;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        h1 {
+            color: #61afef;
+            text-align: center;
+            border-bottom: 2px solid #61afef;
+            padding-bottom: 10px;
+        }
+        .intro {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 5px solid #98c379;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            background: #252526;
+        }
+        th, td {
+            border: 1px solid #3e4451;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3e4451;
+            color: #61afef;
+        }
+        tr:nth-child(even) {
+            background-color: #2c313a;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .tag-editor { background: #e06c75; color: white; }
+        .tag-planner { background: #d19a66; color: white; }
+        .tag-helper { background: #56b6c2; color: white; }
+
+        .agent-card {
+            background: #2d2d2d;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #3e4451;
+        }
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .agent-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #98c379;
+        }
+        code {
+            background: #3e4451;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #d19a66;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WSL CLI Coding AI Agents TOP 20</h1>
+
+    <div class="intro">
+        <p>WSL環境での開発において、ターミナル完結型のAIエージェントは「高速なGit連携」「Linuxコマンドによる環境構築」「自動テストの実行」をシームレスに行えます。本リストでは、PythonやGo、Rust等で構築された最新のCLIエージェントを厳選しました。</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>順位</th>
+                <th>名称</th>
+                <th>主な役割</th>
+                <th>WSLでの利点</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td><strong>Aider</strong></td><td>ペアプログラミング</td><td>Gitとの強力な連携、複数ファイル同時編集</td></tr>
+            <tr><td>2</td><td><strong>Goose</strong></td><td>汎用エージェント</td><td>Block社製。開発タスクの自律実行に特化</td></tr>
+            <tr><td>3</td><td><strong>Plandex</strong></td><td>タスクプランニング</td><td>複雑なバックログを段階的に実行・差分管理</td></tr>
+            <tr><td>4</td><td><strong>Open Interpreter</strong></td><td>コード実行・操作</td><td>WSL OS内のシェルを直接操作し問題を解決</td></tr>
+            <tr><td>5</td><td><strong>Mentat</strong></td><td>コードベース編集</td><td>プロジェクト全体を理解し、一括でリファクタリング</td></tr>
+            <tr><td>6</td><td><strong>GPT-Pilot</strong></td><td>アプリ構築</td><td>要件定義からデプロイまでを対話形式で完遂</td></tr>
+            <tr><td>7</td><td><strong>ShellGPT</strong></td><td>シェルアシスタント</td><td>コマンド生成、ログ解析、短いスクリプト作成</td></tr>
+            <tr><td>8</td><td><strong>Fabric</strong></td><td>ワークフロー自動化</td><td>AIへの指示（プロンプト）をモジュール化して実行</td></tr>
+            <tr><td>9</td><td><strong>gh copilot</strong></td><td>GitHub連携</td><td>GitHub公式。CLIコマンドの提案と解説</td></tr>
+            <tr><td>10</td><td><strong>Moatless Tools</strong></td><td>大規模修復</td><td>既存の巨大なコードベースのバグ修正に特化</td></tr>
+            <tr><td>11</td><td><strong>OpenHands (CLI)</strong></td><td>自律型エンジニア</td><td>Dockerコンテナを介した安全なコード実行</td></tr>
+            <tr><td>12</td><td><strong>Continue (Headless)</strong></td><td>開発自動化</td><td>IDE版の機能をCLIから呼び出し可能</td></tr>
+            <tr><td>13</td><td><strong>Cody CLI</strong></td><td>コンテキスト検索</td><td>Sourcegraphの検索能力をCLIから利用</td></tr>
+            <tr><td>14</td><td><strong>Melty CLI</strong></td><td>オープンソースIDE</td><td>エディタ機能と連携したCLI操作</td></tr>
+            <tr><td>15</td><td><strong>RepoAgent</strong></td><td>ドキュメント生成</td><td>コードを解析し、構造的なREADMEやドキュメントを生成</td></tr>
+            <tr><td>16</td><td><strong>Smol Developer</strong></td><td>最小構成開発</td><td>最小限の指示からスクラッチでコードを生成</td></tr>
+            <tr><td>17</td><td><strong>PyGPT</strong></td><td>汎用ツール</td><td>Pythonベースで多機能なエージェント操作が可能</td></tr>
+            <tr><td>18</td><td><strong>LocalAI (CLI)</strong></td><td>ローカル推論</td><td>WSL内で完全にオフラインなAI環境を構築</td></tr>
+            <tr><td>19</td><td><strong>Auto-GPT (Coding Mode)</strong></td><td>自律実行</td><td>特定のゴールに向けた自律的なファイル操作</td></tr>
+            <tr><td>20</td><td><strong>Abridge</strong></td><td>差分解析</td><td>AI生成コードの差分を効率的にレビュー・適用</td></tr>
+        </tbody>
+    </table>
+
+    <h2>注目すべきCLIエージェントの詳細</h2>
+
+    <div class="agent-card">
+        <div class="agent-header">
+            <span class="agent-name">1. Aider</span>
+            <span class="tag tag-editor">Editor</span>
+        </div>
+        <p>WSLターミナルで最も人気のあるエージェント。<code>aider</code>コマンドで起動。Gitリポジトリと密接に連携し、AIが行った変更を自動的にコミットします。<code>/add &lt;file&gt;</code>でコンテキストを追加し、対話形式で実装を進めます。WSL上のPython環境から簡単にインストール可能です。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-header">
+            <span class="agent-name">2. Goose</span>
+            <span class="tag tag-planner">Autonomus</span>
+        </div>
+        <p>Block社（旧Square）が公開した最新のオープンソースエージェント。特定の開発タスクを与えると、必要なファイルの読み取り、編集、テストの実行を自律的に繰り返します。WSLのパス構造を正確に理解し、既存プロジェクトへの導入が非常にスムーズです。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-header">
+            <span class="agent-name">4. Open Interpreter</span>
+            <span class="tag tag-helper">Execution</span>
+        </div>
+        <p>「ChatGPTにOSを操作させる」感覚のツール。<code>interpreter</code>と入力するだけで、WSL内のPythonやNode.js、シェルコマンドを実行してタスクをこなします。例えば「このディレクトリ内のログファイルを解析して、エラー頻度をグラフ化して」といった指示がコマンドラインから実行可能です。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-header">
+            <span class="agent-name">7. ShellGPT (sgpt)</span>
+            <span class="tag tag-helper">Assistant</span>
+        </div>
+        <p>日常的なターミナル操作を支援する軽量ツール。複雑な<code>find</code>コマンドや<code>sed</code>の正規表現を覚える代わりに、<code>sgpt "find all json files larger than 1MB"</code>のように自然言語でコマンドを生成・実行できます。WSLユーザーの必須ツールの一つです。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-header">
+            <span class="agent-name">9. GitHub CLI Copilot Extension</span>
+            <span class="tag tag-helper">Official</span>
+        </div>
+        <p>GitHub公式のCLI拡張。<code>gh copilot suggest "gitの履歴を書き換えたい"</code>といった形で、コマンドの提案を受けられます。WSLにGitHub CLIを導入していれば、最も手軽に導入できるAIアシスタントです。</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; color: #7d8799; font-size: 0.9em;">
+        <p>※ 各ツールの利用には、OpenAI, Anthropic, Google等のAPIキー、またはOllamaによるローカルLLMが必要です。</p>
+    </div>
+
+</body>
+</html>
