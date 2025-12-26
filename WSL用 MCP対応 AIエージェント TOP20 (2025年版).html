@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSL対応 MCP/CLI AIエージェント TOP20 - ツール連携版</title>
+    <style>
+        :root {
+            --bg-dark: #0f1115;
+            --terminal-black: #1a1d23;
+            --accent-blue: #00aaff;
+            --accent-green: #50fa7b;
+            --accent-purple: #bd93f9;
+            --text-main: #e6edf3;
+            --border-color: #30363d;
+        }
+        body {
+            font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace, "Meiryo";
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.5;
+            margin: 0;
+            padding: 25px;
+        }
+        h1 { text-align: center; color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        .mcp-info {
+            background: rgba(189, 147, 249, 0.1);
+            border: 1px solid var(--accent-purple);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; background: var(--terminal-black); }
+        th, td { border: 1px solid var(--border-color); padding: 12px; text-align: left; vertical-align: top; }
+        th { background: #21262d; color: var(--accent-blue); }
+        tr:hover { background: #262c36; }
+
+        .badge { padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+        .badge-mcp { background: var(--accent-purple); color: white; }
+        .badge-free { background: var(--accent-green); color: #000; }
+        .badge-pay { background: #ff5555; color: white; }
+
+        .guide-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--terminal-black);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card h3 { color: var(--accent-green); margin-top: 0; }
+        code { color: #ff79c6; background: #282a36; padding: 2px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>WSL用 MCP対応 AIエージェント TOP20 (2025年版)</h1>
+
+    <div class="mcp-info">
+        <strong>💡 MCP (Model Context Protocol) とは？</strong><br>
+        AIエージェントが、外部のツール（DB, Git, Slack, Backlog等）と共通の規格で通信するための仕組みです。MCPサーバーを1つ用意すれば、複数の対応エージェントから同じツールを利用できるようになります。
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>順位</th>
+                <th>エージェント名</th>
+                <th>MCP対応</th>
+                <th>ツール / LLM費用</th>
+                <th>DB/Backlog/Slack等の連携能力</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td><strong>Claude Code</strong></td><td><span class="badge badge-mcp">公式サポート</span></td><td>無料(OSS) / 従量</td><td>Anthropic公式CLI。MCP連携の安定性No.1。全調査を自律実行。</td></tr>
+            <tr><td>2</td><td><strong>Goose</strong></td><td><span class="badge badge-mcp">ネイティブ</span></td><td>無料(OSS) / 従量</td><td>Block社製。MCPサーバーの追加が容易で「拡張」を前提とした設計。</td></tr>
+            <tr><td>3</td><td><strong>Cline (via CLI)</strong></td><td><span class="badge badge-mcp">強力</span></td><td>無料(OSS) / 従量</td><td>VS Code拡張だがWSLターミナル操作に長け、MCP Hubとして機能。</td></tr>
+            <tr><td>4</td><td><strong>Open Interpreter</strong></td><td><span class="badge badge-mcp">Python経由</span></td><td>無料(OSS) / 従量</td><td>直接コード実行。Python MCP Client経由で何でも操作可能。</td></tr>
+            <tr><td>5</td><td><strong>Aider</strong></td><td><span class="badge">ツール経由</span></td><td>無料(OSS) / 従量</td><td>Git履歴解析は最強。外部通知はシェルスクリプト連携で対応。</td></tr>
+            <tr><td>6</td><td><strong>Roo Code</strong></td><td><span class="badge badge-mcp">強力</span></td><td>無料(OSS) / 従量</td><td>Clineのフォーク。MCP操作の柔軟性と実行完遂力が極めて高い。</td></tr>
+            <tr><td>7</td><td><strong>Plandex</strong></td><td><span class="badge">API連携</span></td><td>一部有料 / 従量</td><td>複雑なBacklogの要件をタスク分解して複数ファイルに適用。</td></tr>
+            <tr><td>8</td><td><strong>OpenHands</strong></td><td><span class="badge badge-mcp">対応済</span></td><td>無料(OSS) / 従量</td><td>Docker上で動作。DB接続やブラウジング等のMCPツールを多用。</td></tr>
+            <tr><td>9</td><td><strong>Continue</strong></td><td><span class="badge badge-mcp">対応中</span></td><td>無料(OSS) / 従量</td><td>ローカルLLM/リモートAPI両対応。MCPプロンプト連携を強化中。</td></tr>
+            <tr><td>10</td><td><strong>GitHub Copilot CLI</strong></td><td><span class="badge">限定的</span></td><td>サブスク制</td><td>Git履歴確認には強いが、DB/Slack連携には不向き。</td></tr>
+            <tr><td>11</td><td><strong>Mentat</strong></td><td><span class="badge">拡張可</span></td><td>無料(OSS) / 従量</td><td>ファイル編集特化だが、Python拡張でSlack通知等も実装可能。</td></tr>
+            <tr><td>12</td><td><strong>GPT-Pilot</strong></td><td><span class="badge">限定的</span></td><td>無料(OSS) / 従量</td><td>新規開発のフローに強いが、既存DB解析はMCPサーバーが必要。</td></tr>
+            <tr><td>13</td><td><strong>Fabric</strong></td><td><span class="badge">一部</span></td><td>無料(OSS) / 従量</td><td>Slack用プロンプト、要約用プロンプトをパターン化して実行。</td></tr>
+            <tr><td>14</td><td><strong>ShellGPT</strong></td><td><span class="badge">なし</span></td><td>無料(OSS) / 従量</td><td>1問1答。Slack通知などの自動化はシェル芸が必要。</td></tr>
+            <tr><td>15</td><td><strong>Amazon Q (CLI)</strong></td><td><span class="badge">AWS特化</span></td><td>無料枠有</td><td>AWSコンソールやDB(RDS)操作に特化したAIアシスト。</td></tr>
+            <tr><td>16</td><td><strong>Cody CLI</strong></td><td><span class="badge">限定的</span></td><td>一部無料</td><td>大規模検索には強いが、アクション（通知・更新）は弱め。</td></tr>
+            <tr><td>17</td><td><strong>RepoAgent</strong></td><td><span class="badge">なし</span></td><td>無料(OSS) / 従量</td><td>解析結果をドキュメント化しBacklog等に貼る用途。</td></tr>
+            <tr><td>18</td><td><strong>Smol Developer</strong></td><td><span class="badge">なし</span></td><td>無料(OSS) / 従量</td><td>軽量なスクリプト生成。自作Slack通知スクリプトの作成用。</td></tr>
+            <tr><td>19</td><td><strong>LocalAI (CLI)</strong></td><td><span class="badge">なし</span></td><td>完全無料</td><td>オフライン。MCPサーバーもローカルで自作する必要あり。</td></tr>
+            <tr><td>20</td><td><strong>PyGPT</strong></td><td><span class="badge badge-mcp">対応済</span></td><td>無料(OSS) / 従量</td><td>プラグイン形式でMCPや各種サービスを統合管理。</td></tr>
+        </tbody>
+    </table>
+
+    <h2>目的別：最強の組み合わせガイドライン</h2>
+    
+    <div class="guide-section">
+        <div class="card">
+            <h3>🔍 大規模システムの解析・調査</h3>
+            <p><strong>推奨:</strong> <code>Claude Code</code> または <code>Cody CLI</code></p>
+            <ul>
+                <li><strong>Git履歴:</strong> AIが <code>git log</code> や <code>git diff</code> を自ら実行し、バグの混入時期を特定。</li>
+                <li><strong>Backlog連携:</strong> MCP経由で課題内容を読み込み、現在のコードとの乖離を調査。</li>
+                <li><strong>DB確認:</strong> PostgreSQL/MySQL用MCPサーバーを接続し、実データを確認しながら原因究明。</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>📢 運用自動化・Slack通知</h3>
+            <p><strong>推奨:</strong> <code>Goose</code> または <code>Open Interpreter</code></p>
+            <ul>
+                <li><strong>フロー:</strong> AIがGitの更新を確認 → DBの整合性チェック → 結果をSlack MCP経由で報告。</li>
+                <li><strong>強み:</strong> GooseはMCPサーバーを追加するだけで「できること」が無限に増えます。</li>
+                <li><strong>実行例:</strong> <code>goose run "DBの最新10件をSlackの#devチャンネルに要約して送って"</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>WSLでのMCP運用・導入のヒント</h2>
+    <div class="card" style="margin-top: 20px; border-left: 5px solid var(--accent-purple);">
+        <ul>
+            <li><strong>MCPサーバーの準備:</strong> Node.jsがWSLに入っていれば、<code>npx @modelcontextprotocol/server-postgres</code> のように即座にDBサーバーを立てられます。</li>
+            <li><strong>Backlog連携:</strong> 公式MCPはまだ少ないため、Backlog APIを叩くPythonスクリプトを <code>Open Interpreter</code> に実行させるか、カスタムMCPサーバーを数行のNode.jsで書くのが定石です。</li>
+            <li><strong>Slack通知:</strong> <code>slack-mcp-server</code> を利用。AIに <code>chat.postMessage</code> 権限を与えることで、解析結果をそのままチャンネルへ流せます。</li>
+        </ul>
+    </div>
+
+    <p style="text-align: center; color: #8b949e; font-size: 0.8em; margin-top: 50px;">
+        ※ MCP対応状況は2025年12月現在のものです。急速な進化により多くのツールがネイティブ対応を進めています。
+    </p>
+</div>
+
+</body>
+</html>
